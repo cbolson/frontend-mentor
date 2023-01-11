@@ -1,0 +1,142 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+:root {
+  --body-pad: 1rem;
+  --container-max-width: 100%;
+  --bg-clr: hsl(0, 0%, 100%);
+  --txt-clr-400: hsl(236, 13%, 42%);
+  --txt-clr-700: hsl(240, 100%, 5%);
+  --clr-primary: hsl(35, 77%, 62%);
+  --clr-secondary: hsl(5, 85%, 63%);
+  --btn-bg-clr: hsl(5, 85%, 63%);
+  --nav-clr: hsl(233, 8%, 79%);
+  /* Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%) */
+}
+
+body {
+  font-family: "Inter-Bold";
+  font-size: 15px;
+  padding: var(--body-pad);
+  line-height: 1.6em;
+  color: var(--txt-clr-400);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: var(--container-max-width);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.header__nav a {
+  color: var(--nav-clr);
+  font-size: 1.2rem;
+}
+p {
+}
+
+.hero {
+  display: grid;
+  width: 100%;
+
+  gap: 2em;
+  margin-bottom: 2rem;
+}
+
+.hero__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.hero__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.hero__details h1 {
+  font-size: 3.3em;
+  line-height: 1.2em;
+  color: var(--txt-clr-700);
+}
+.hero__subtitle {
+}
+.hero__cta {
+  border: 0;
+  background-color: var(--btn-bg-clr);
+  color: #fff;
+  padding: 0.8rem 1.8em;
+  font-size: 1.1rem;
+  margin-top: 1em;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+.hero__news {
+  background-color: black;
+  padding: 2rem;
+}
+.hero__news h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--clr-primary);
+}
+.hero__news__item {
+  padding-bottom: 1rem;
+}
+.hero__news__item + .hero__news__item {
+  border-top: 1px solid hsl(36, 100%, 99%);
+}
+.hero__news__item h3 {
+  color: hsl(36, 100%, 99%);
+  margin-top: 2rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media all and (min-width: 600px) {
+  :root {
+    --body-pad: 3rem;
+    --container-max-width: 1050px;
+  }
+  .header {
+  }
+  .hamburger {
+    display: none;
+  }
+  .header__nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero{
+    grid-template-columns: 2fr 1fr;
+  }
+  .hero__details{
+    flex-direction: row;
+  }
+  .hero__details > * {
+  width: 50%;
+}
+}
