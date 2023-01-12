@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__left">
+          <h1>My balance</h1>
+          <div class="header__balance">$921.48</div>
+          
+        </div>
+        <div class="header__logo"><img src="images/logo.svg" alt="" />
+      </header>
+      <main>
+        <h2>Spending - Last 7 days</h2>
+        <div class="chart" data-chart>
+          <ul class="chart__bars" bar-chart>
+            <li><div class="data" data-mon></div><label>mon</label></li>
+           <li ><div class="data" data-tue></div><label>tues</label></li>
+           <li><div class="data"  data-wed></div><label>wed</label></li>
+           <li><div class="data"  data-thu></div><label>thurs</label></li>
+           <li><div class="data"  data-fri></div><label>fri</label></li>
+           <li><div class="data"  data-sat></div><label>sat</label></li>
+           <li><div class="data"  data-sun></div><label>sun</label></li>
+           </ul> 
+          </div>
+        <div class="chart__summary">
+          <div class="chart__current">
+            <h2>Total this month </h2>
+            <div class="chart__total">$478.33</div>
+          </div>
+          <div class="chart-compare">
+            <h3>+2.4%</h3>from last month
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

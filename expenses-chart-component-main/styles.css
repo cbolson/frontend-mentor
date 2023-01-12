@@ -1,0 +1,129 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --body-bg: hsl(27, 66%, 92%);
+  --clr-primary: hsl(10, 79%, 65%);
+  --clr-secondary: hsl(186, 34%, 60%);
+--txt-clr:hsl(25, 47%, 15%);
+  --bdr-rad: 1rem;
+
+  --data-percent:60%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--body-bg);
+  font-size: 18px;
+  color:var(--txt-clr);
+  margin:2rem;
+}
+h1,h2{
+    font-weight: normal;
+}
+.wrapper {
+  max-width: 560px;
+  margin: 3em auto;
+}
+
+.header,
+main {
+  border-radius: var(--bdr-rad);
+  padding: 1.5rem 2rem;
+}
+
+.header {
+  background-color: var(--clr-primary);
+  color: var(--body-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+.header h1 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom:.5rem;
+}
+.header__balance {
+  font-size: 2rem;
+  color: #fff;
+}
+.header__logo {
+}
+main{
+    background-color: #FFF;
+  padding:2rem;
+}
+
+
+.chart{
+    height:300px;
+
+    margin-block: 2rem;
+    border-bottom: 2px solid var(--body-bg);
+}
+.chart__bars{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-auto-flow: column;
+    justify-content: space-between;
+    height:200px;
+    gap:1.2rem;
+}
+.chart__bars li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    height:100%;
+}
+.data{
+    
+    background-color: var(--clr-primary);
+    height:var(--data-percent);
+    border-radius: 5px;;
+}
+.chart__bars label{
+    font-size: .9rem;
+    color: hsl(28, 10%, 53%);
+}
+.chart__bars li:nth-of-type(3) .data{
+    background-color: var(--clr-secondary);
+}
+.chart__summary{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.chart__summary h2 {
+    font-size: 1.2rem;
+    color:hsl(28, 10%, 53%);
+    margin-bottom:.5rem;
+}
+.chart__total{
+    font-size: 3rem;
+    font-weight: 700;
+    padding:0;
+}
+.chart__current,
+.chart-compare{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.chart-compare{
+    text-align: right;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
